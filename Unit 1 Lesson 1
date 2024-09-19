@@ -1,0 +1,12 @@
+# this is a code comment
+name = "Leslie"
+print("Hello", name)
+
+"name = "Leslie"" - no output, this is declaring a variable
+"print("Hello", name)" - outputs "Hello Leslie"
+
+# this is a code comment
+name = "Aiden"
+print("Hello", name)
+
+Same as earlier except now the code will output "Hello Aiden"
