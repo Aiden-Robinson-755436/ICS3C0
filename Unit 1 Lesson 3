@@ -1,0 +1,62 @@
+# TASK A
+
+# 1.
+
+print("Welcome to Sanjay's Koala Party!")
+print("It's possible Sanjay can distribute ", 12)
+print(" cookies for each bowl.")
+
+
+# 2.
+
+# I predict the output to be as follows
+
+Welcome to Sanjay's Koala Party!
+It's possible Sanjay can distribute  12
+ cookies for each bowl.
+
+# 3.
+
+# My prediction was correct.
+
+# 4.
+
+# To fix the space around the 12, I'd remove the space after "distribute"
+
+print("It's possible Sanjay can distribute", 12)
+
+# Python adds a space automatically, so this is not needed.
+
+# TASK B
+
+print("Sanjay has", 6, "bowls for", 144, "cookies.")
+
+# TASK C
+
+number = 12*2
+print("The number of cookies per bowl is:", number)
+
+print("There are ", 28, " people in this room.");
+print("Your total money spent is: ", (2.75+9.32+11.91))
+
+# This is helpful because you don't need to spend time doing math yourself.
+
+print("There are %d people in this room." % 28)
+
+# I don't understand how this is more efficient than a variable.
+
+print("Pi is equal to %f" % 3.1416)
+
+# This definetly has practical application for rounding.
+
+print("%s's final score is %d" % ("Joe", 215))
+
+# This could help for making large databases of info.
+
+print("Total money spent is: %.2f" % (2.75+9.32+11.91))
+
+# This is helpful because it rounds to 2 decimal places, making it good for money.
+
+print("The area of a circle of radius %d is %f" % (4, 3.1416*4*4)
+
+# This is once again helpful, doing the math and rounding it for you.
