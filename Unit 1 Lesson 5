@@ -1,0 +1,22 @@
+# 1. Predict
+
+Please input a length: (input 10 to continue prediction)
+The area of a square of side length 10 is: 100
+
+# 2. Run
+
+# My prediction was correct
+
+# 3. Inspect
+
+# It stopped executing awaiting user input. I inputted 10. It gave me an output of 100, that matched my calculator.
+
+# 4. Modify
+
+import math
+
+print ("Area of a normal window shape")
+num = input("Enter the circle's radius: ")
+num = float(num)
+num2 = 0.5*3.14159*num*num + 4*num*num
+print("Area is:", num2)
