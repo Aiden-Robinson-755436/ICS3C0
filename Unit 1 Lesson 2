@@ -1,0 +1,59 @@
+# 1. Predict.
+
+# Look at the code below in the green box. In your reflection, predict what output you would expect from the statement.
+
+print(24)
+
+# I'd expect the output to be "24"
+
+
+# 2. Run
+
+# The output was as I expected and printed 24.
+
+
+# 3. Modify
+
+amount = 24
+print(amount)
+
+print("Two dozen is", amount)
+
+# Printing it like this allows you to change the variable, or allow users to input their own variable.
+
+# 4. Modify 2
+
+amount = 7*4
+print("Seven times four is equal to", amount)
+
+# 5. Modify 3
+
+amount = 8
+amount = amount + 1
+print("The amount is: ", amount)
+
+# This is assigning the original "amount" to 8, then reassigning "amount" to 9, by adding 1 to the original value. It then prints the final amount after the math.
+
+amount = 8
+amount += 1
+print("The amount is: ", amount)
+
+# This code has the same output, however its compacted into "amount += 1", changing the 1 will also change how much is added. Changing the "+" to a "-" makes it remove the amount instead of adding it.
+
+
+# 6. Modify 4
+
+amount = 8
+amount = amount * 2
+print(amount)
+
+# This will take the amount variable's value (8), and times it by the number specified (2). It will print 16.
+
+# Modifying the code to be similar to our earlier code as below
+
+
+amount = 8
+amount *= 2
+print(amount)
+
+# This has the same output. It's the same as our code earlier, where we said +=, just with multiplication. I can assume this would also work for divison or other types of math.
