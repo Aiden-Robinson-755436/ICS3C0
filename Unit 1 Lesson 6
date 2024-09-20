@@ -1,0 +1,10 @@
+birthyear = input("Please enter your year of birth: ")
+age = input("Please enter your age: ")
+birthyear = int(birthyear)
+age = int(age)
+birthyear *= 2
+birthyear *= 50
+birthyear += age
+birthyear -+ 250
+birthyear /= 100
+print(birthyear)
