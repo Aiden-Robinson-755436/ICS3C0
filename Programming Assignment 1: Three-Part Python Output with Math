@@ -1,0 +1,122 @@
+import math
+import time
+
+"""
+   Author : Aiden Robinson
+   Revison date : 24 September 2024
+   Program : Three-Part Python Output with Math
+   Description : We solve multiple mathematical problems while allowing user input
+   VARIABLE DICTIONARY :
+     length (int) = length of rectangle
+     height (int) = height of cylinder
+     width (int) = width of rectanlge
+     rectangle (int) = used to present final sum after math
+     radius (int) = Radius of circle
+     area (int) = area of circle after math
+     radius2 (int) = radius of cylinder
+     volume (int) = volume of cylinder
+     surface (int) = surface area of cylinder
+     L (int) = distance travelled
+     g (int) = force of gravity strength
+     P (int) = time pendulum took to swing
+"""
+
+print("Welcome to the very specific Python calculator")
+print(" ")
+
+length = input("Enter the length of your rectangle please: ")
+print(" ")
+print("Thank you for the length of your rectangle.")
+time.sleep(3)
+print(" ")
+width = input("Enter the width of your rectangle please: ")
+print(" ")
+print("Thank you for the width of your rectangle.")
+
+length = int(length)
+width = int(width)
+
+rectangle = length*width
+rectangle = int(rectangle)
+
+time.sleep(3)
+print(" ")
+print("The area of your rectangle is: %.2f" % rectangle)
+
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+
+radius = input("Enter the radius of your circle please: ")
+print(" ")
+print("Thank you for the radius of your circle.")
+time.sleep(3)
+radius = float(radius)
+
+area = math.pi*math.pow(radius, 2)
+
+print("The area of your circle is: %.2f" % area)
+
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+
+radius2 = input("Enter the radius of your cylinder please: ")
+print(" ")
+print("Thank you for the radius of your cylinder.")
+time.sleep(3)
+
+height = input("Enter the height of your cylinder please: ")
+print(" ")
+print("Thank you for the height of your cylinder.")
+
+radius2 = int(radius2)
+height = int(height)
+
+volume = math.pi*math.pow(radius2, 2)*height
+volume = int(volume)
+
+surface = 2*math.pi*radius2*height+2*math.pi*math.pow(radius2, 2)
+surface = int(surface)
+
+print("Your surface area is %.2f" % surface)
+print("Your volvume is %.2f" % volume)
+
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+
+L = input("Enter the distance your pendulum swang: ")
+print(" ")
+print("Thank you.")
+time.sleep(3)
+g = 9.8
+
+g = int(g)
+L = int(L)
+P = 2*math.pi*math.sqrt(L/g)
+
+print(" ")
+print("The period of your pendulum is %.2f" % P)
+
+
+time.sleep(6)
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+print(" ")
+time.sleep(0.5)
+
+print("Thanks for using my program!")
