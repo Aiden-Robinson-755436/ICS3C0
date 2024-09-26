@@ -1,0 +1,59 @@
+1. Predict
+
+Predict the output of the following code: for a choice of C
+
+print("Make a choice from the following menu: ")
+print("A: apples")
+print("B: bananas")
+print("C: cherries")
+
+ch = input("Your choice: ")
+
+if (ch == "A"):
+    print("I prefer apples")
+elif (ch == "B"):
+    print("I prefer bananas")
+else:
+    print("I prefer cherries")
+
+The output will be "I prefer cherries"
+
+2. Modify 1
+
+print("Make a choice from the following menu: ")
+print("A: apples")
+print("B: bananas")
+print("C: cherries")
+
+ch = input("Your choice: ")
+
+if (ch == "A"):
+    print("I prefer apples")
+elif (ch == "B"):
+    print("I prefer bananas")
+elif (ch == "C"):
+    print("I prefer cherries")
+else:
+    print("Wrong input")
+
+3. Modify 2
+
+num = input("Input a number between 1-100 please: ")
+num = int(num)
+
+if (num >= 80) and (num <= 100):
+    print("A")
+elif (num >= 70) and (num <= 79):
+    print("B")
+elif (num >= 60) and (num <= 69):
+    print("C")
+elif (num >= 50) and (num <= 59):
+    print("D")
+elif (num >= 0) and (num <= 49):
+    print("F")
+else:
+    print("Wrong input")
+
+
+if statements were fairly easy to pickup because of my knowledge on java, it's very very similar to use.
+
