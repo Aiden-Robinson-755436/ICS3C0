@@ -1,0 +1,98 @@
+1. Predict
+
+import math
+
+x = input("Please input a whole number: ") ## I input 6
+x = int(x) 
+y = input("Please input another nonzero whole number") ## I input 3
+y = int(y)
+print("Now deciding if", y, "is a factor of", x, "...") ## It will say "Now deciding if 6 is a factor of 3".
+rem = x % y
+if rem == 0:
+    print("Yes!", y, "is a factor of", x) ## It will say "Yes! 3 is a factor of 6".
+
+
+2. Run
+
+My prediction was correct. The road tells you if a number is a factor of another number you select.
+
+3. Inspect
+
+Yes, the output matches calculator calculations.
+
+4. Modify
+
+import math
+
+import math
+
+x = input("Please input a whole number: ")
+x = int(x)
+y = input("Please input another nonzero whole number: ")
+y = int(y)
+print("Now deciding if", y, "is a factor of", x, "...")
+
+if (y != 0):
+    rem = x % y
+else:
+    print("Try again.")
+    
+if rem == 0:
+    print("Yes!", y, "is a factor of", x)
+
+Now this code only performs if y is not equal to 0
+
+5. Modify 2
+
+import math
+
+x = input("Please input a whole number: ")
+x = int(x)
+y = input("Please input another nonzero whole number: ")
+y = int(y)
+print("Now deciding if", y, "is a factor of", x, "...")
+
+if (y != 0):
+    rem = x % y
+else:
+    print("Try again. Zero cannot be entered.")
+    
+if rem == 0:
+    print("Yes!", y, "is a factor of", x)
+
+Now the code specifically tells the user you cannot enter zero.
+
+6. Modify 3
+
+import math
+
+x = input("Please input a whole number between 1 and 20: ")
+x = int(x)
+
+if (x >= 1) and (x <= 20):
+    
+    y = input("Please input another nonzero whole number between 1 and 20: ")
+    y = int(y)
+    
+    if (y >= 1) and (y <= 20):
+    
+        print("Now deciding if", y, "is a factor of", x, "...")
+
+        if (y != 0):
+                rem = x % y
+        else:
+            print("Try again. Zero cannot be entered.")
+        if rem == 0:
+            print("Yes!", y, "is a factor of", x)
+    
+        else:
+            print("No!", y, "is not a factor of", x)
+
+    else:
+        
+        print("Wrong input")
+
+else:
+    
+    print("Wrong input")
+
