@@ -35,3 +35,26 @@ while (count < num):
     
 print("Triangular number ",num ," is equal to", tot)
 
+
+Modify:
+
+num = input("Please enter a whole number greater than zero: ")
+num = int(num)
+print(" ")
+count = 0
+count = int(count)
+tot = 0
+tot = int(tot)
+counter = 0
+counter = int(counter)
+
+while (count < num):
+    counter += 1
+    count = count + 1
+    tot = tot + count
+
+    print("The",counter, "triangular number is", tot)
+    
+    
+
+
