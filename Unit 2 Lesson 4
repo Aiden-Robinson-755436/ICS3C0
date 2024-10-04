@@ -1,0 +1,17 @@
+n = input("Please enter a whole number greater than zero: ")
+n = int(n)
+prod = 0
+prod = int(prod)
+
+while (prod <= n):
+    fac = prod
+    count = prod
+    while (count > 0):
+        count -= 1
+        if (count != 0):
+            fac *= count
+            
+    if (prod == 0):
+        fac = 1
+            print("%d! = %d" % (prod, fac))
+    prod += 1
