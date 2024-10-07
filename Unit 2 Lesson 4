@@ -12,6 +12,6 @@ while (prod <= n):
             fac *= count
             
     if (prod == 0):
-        fac = 1
-            print("%d! = %d" % (prod, fac))
+      fac = 1
+    print("%d! = %d" % (prod, fac))
     prod += 1
