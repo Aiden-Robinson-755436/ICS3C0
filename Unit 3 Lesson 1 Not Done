@@ -1,0 +1,54 @@
+Predict:
+
+def add(a, b):
+  return a + b
+
+print(add(7, 2))
+
+I predict that it'll output "9" because "add" would suggest we are adding numbers,
+return "a+b" confirms that and in the print statement 7 and 2 are mentioned.
+
+By changing the code as such below
+
+def add(a, b):
+  return a + b
+
+print(add('hi', 'bye'))
+
+It will still try to add the strings, giving the output "hibye"
+
+By changing the code to mix data types like below
+
+def add(a, b):
+  return a + b
+
+print(add('hi', 3))
+
+The program crashes.
+
+Modify
+
+try:
+    a = float(input('Please input a number: '))
+
+except ValueError:
+    print('Wrong input, try again with a number.')
+
+try:
+    b = float(input('Please input a number: '))
+
+except ValueError:
+    print('Wrong input, try again with a number.')
+
+infinity = float('inf')
+neginfinity = float('-inf')
+
+if (a >= neginfinity) and (a <= infinity):
+  a = float(a)
+  if (b >= neginfinity) and (b <= infinity):
+    b = float(b)
+   
+    def multiply(a, b):
+     return a * b
+
+    print("Your answer is: ", (multiply(a, b)))
