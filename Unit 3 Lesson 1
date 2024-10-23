@@ -28,27 +28,51 @@ The program crashes.
 
 Modify
 
-try:
-    a = float(input('Please input a number: '))
-
-except ValueError:
-    print('Wrong input, try again with a number.')
-
-try:
-    b = float(input('Please input a number: '))
-
-except ValueError:
-    print('Wrong input, try again with a number.')
-
 infinity = float('inf')
 neginfinity = float('-inf')
 
+a=0
+b=0
+a = float(a)
+b = float(b)
+counter = 0
+counter = float(counter)
+counter2 = 0
+counter2 = float(counter2)
+
+while (counter == 0):
+ try:
+     a = float(input('Please input first number: '))
+     counter = counter + 1
+     
+ except ValueError:
+     print('Wrong input, try again with a number.')
+
+while (counter2 == 0):
+ try:
+     b = float(input('Please input second number: '))
+     counter2 = counter2 + 1
+      
+ except ValueError:
+     print('Wrong input, try again with a number.')
+
+
 if (a >= neginfinity) and (a <= infinity):
-  a = float(a)
   if (b >= neginfinity) and (b <= infinity):
-    b = float(b)
+
    
     def multiply(a, b):
      return a * b
 
     print("Your answer is: ", (multiply(a, b)))
+
+Modify 2
+
+import math
+
+def myPow(a, b):
+  return math.pow(a, b)
+
+print(myPow(5, 2))
+
+Result : 25.0
