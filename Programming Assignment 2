@@ -1,0 +1,39 @@
+import math
+
+print("Welcome to the school yearbook program!")
+print(" ")
+print(" ") ## Spacing to make it look neat
+
+
+counter = 0
+counter = int(counter) ## Preparing for the loop exit condition
+while counter == 0:
+
+    N = input("Please input a number of photos: ") ## Requests the number from user
+    N = int(N)
+    if N >= 1: ## Checks if N is positive or negative
+        width = 1
+        height = N ## assigns height to the users number, if 1xN is the best solution this will be printed
+
+        squareroot = (math.sqrt(N))
+        squareroot = int(squareroot) ## Gets the square root of N
+        i = 1
+        while i <= squareroot: ## While i is less than the square root it loops to find the best factor
+            if N % i == 0: ## checks remainder since everything divides into 1 evenly
+                width2 = i
+                height2 = N / i
+
+                if (height2 - width2) < (height - width): ## compares the numbers and if the height and width are smaller than the "best" height and width it updates the variables
+                    width = width2
+                    height = height2
+            i += 1 ## makes the loop continue until it is greater or equal to square root of N
+
+        perimeter = 2 * (width + height) ## simply calculates the perimeter by getting the 2 sides, (if N = 6, then it would be 2x3), and multiplying by 2 to get all 4 sides then adding it
+
+        print("The best dimensions for ", N, " photos are ", width, " x ", height) ## prints dimensions
+        print("The perimeter of this layout is ", perimeter) ## prints perimeter
+
+        counter = 1 ## ends loop!
+
+    else:
+        print(N, " is not a valid number of photos. Please enter a positive number.") ## displays if user enters 0 or negative number
