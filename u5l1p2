@@ -1,0 +1,34 @@
+DEBUGGING:
+
+import turtle
+
+t = turtle.Turtle()
+
+for i in range(3):
+  t.forward(100)
+  t.left(120)
+
+MODIFY 2: 
+
+import turtle
+
+t = turtle.Turtle()
+
+for i in range(60):
+  t.forward(100)
+  t.left(121)
+
+It doesn't line up properly and creates a sort of circular design eventually
+
+MODIFY 3:
+
+t = turtle.Turtle()
+endloop = 0
+counter = 0
+
+while(endloop == 0):
+ t.forward(100)
+ t.left(87)
+ counter += 1
+ if (counter == 80):
+  break
