@@ -16,3 +16,31 @@ for i in range(105):
     for char in colourLine:
      char2 = char + char
      print(char2)
+
+
+
+NOV 19
+
+import turtle
+
+t = turtle.Turtle()
+
+filename = "smiley_emoji_mod.xpm"
+fh = open(filename, "r")
+counter = 0
+num = 0
+num2 = 6
+colourLine = fh.readline()
+colourLine = colourLine.strip()
+cols, rows, numcolours = colourLine.split()
+print(colourLine)
+
+# for i in range(105):
+#  colourLine = fh.readline()
+#  counter += 1
+#  if (counter == num2):
+#    for i in range(1):
+#     num2 += 1
+#     for char in colourLine:
+#      char2 = char + char
+#      print(char2)
