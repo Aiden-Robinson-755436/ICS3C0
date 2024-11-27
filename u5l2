@@ -44,3 +44,25 @@ print(colourLine)
 #     for char in colourLine:
 #      char2 = char + char
 #      print(char2)
+
+
+NOV 27
+
+import turtle
+
+t = turtle.Turtle()
+
+filename = "smiley_emoji_mod.xpm"
+fh = open(filename, "r")
+counter = 0
+num = 0
+num2 = 6
+colourLine = fh.readline()
+colourLine = colourLine.strip()
+cols, rows, numcolours = colourLine.split()
+print(colourLine)
+print(cols)
+print(rows)
+print(numcolours)
+colourData = fh.readline()
+print(colourData)
