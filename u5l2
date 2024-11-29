@@ -66,3 +66,46 @@ print(rows)
 print(numcolours)
 colourData = fh.readline()
 print(colourData)
+
+NOV 29
+
+import turtle
+
+t = turtle.Turtle()
+
+filename = "square.xpm"
+fh = open(filename, "r")
+counter = 0
+num = 0
+num2 = 6
+colourLine = fh.readline()
+colourLine = colourLine.strip()
+cols, rows, numcolours = colourLine.split()
+numcolours = int(numcolours)
+
+for i in range(numcolours):
+   colourdata = fh.readline()
+   colourdata.strip() 
+   sym, c, colour = colourdata.split()
+   print(colour)
+   print(sym)
+   print(c)
+   print(colourdata)
+   
+colorDefs = {}
+for i in range(numcolours):
+   colourdata = fh.readline()
+   colourdata.strip() 
+   sym, c, colour = colourdata.split()
+   print(colour)
+   print(sym)
+   print(c)
+   print(colourdata)
+ 
+if ("~"):
+    sym == " "
+   
+colorDefs[sym] = color # add a new dictionary entry
+
+
+
