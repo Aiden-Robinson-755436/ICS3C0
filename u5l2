@@ -107,5 +107,20 @@ if ("~"):
    
 colorDefs[sym] = color # add a new dictionary entry
 
+DEC 4 (FINISHED)
+
+filename = "smiley_emoji_mod.xpm"
+fh = open(filename, "r")
+counter = 0
+num = 0
+num2 = 6
+colourLine = fh.readline()
+colourLine = colourLine.strip()
+cols, rows, numcolours = colourLine.split()
+colourData = fh.readline()
+
+print("Dimensions are: ", cols, "x", rows)
+print("The number of colours are: ", numcolours)
+
 
 
