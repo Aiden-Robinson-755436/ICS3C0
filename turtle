@@ -1,0 +1,22 @@
+import turtle
+
+t = turtle.Turtle()
+
+filename = "smiley_emoji_mod.xpm"
+fh = open(filename, "r")
+counter = 0
+num = 0
+num2 = 6
+colourLine = fh.readline()
+colourLine = colourLine.strip()
+cols, rows, numcolours = colourLine.split()
+colourData = fh.readline()
+
+colorDefs = {}
+for i in range(numColors):
+   colorLine = fh.readline() # file handle must be open
+   colorLine.strip() 
+   sym, c, color = colorLine.split()
+   # you need to insert code here to exchange
+   # the tilde (~) for a space in the symbols!
+   colorDefs[sym] = color # add a new dictionary entry
