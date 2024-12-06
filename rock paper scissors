@@ -1,0 +1,54 @@
+import random
+
+print("Welcome to Rock, paper, scissors!")
+print(" ")
+counter = 0
+counter = int(counter)
+playerpoint = 0
+robotpoint = 0
+print("How many games would you like to play?")
+games = input("I'd like to play: ")
+games = int(games)
+ 
+while (counter < games):
+ print("Choices: Rock (R), Paper (P), Scissors (S)")
+ player = input("Please enter your choice: ")
+ print(" ")
+ robot = random.randint(1, 3) ## ROCK == 1, PAPER == 2, SCISSORS == 3
+ counter += 1
+ if (player == 'R') & (robot == 1):
+  print("It's a tie! Nobody has won this round.")
+  playerpoint += 0
+  robotpoint += 0
+ elif (player == 'R') & (robot == 2):
+  print("Computer wins! +1 point")
+  playerpoint += 0
+  robotpoint += 1
+ elif (player == 'R') & (robot == 3):
+  print("Player wins! +1 point")
+  playerpoint += 1
+  robotpoint += 0
+ elif (player == 'S') & (robot == 1)
+  print("Computer wins! +1 point")
+  playerpoint += 0
+  robotpoint += 1
+ elif (player == 'S') & (robot == 2):
+  print("Player wins! +1 point")
+  playerpoint += 1
+  robotpoint += 0
+ elif (player == 'S') & (robot == 3):
+  print("It's a tie! Nobody has won this round.")
+  playerpoint += 0
+  robotpoint += 0
+ elif (player == 'P') & (robot == 1):
+  print("Player wins! +1 point")
+  playerpoint += 1
+  robotpoint += 0
+ elif (player == 'P') & (robot == 2):
+  print("It's a tie! Nobody has won this round.")
+  playerpoint += 0
+  robotpoint += 0
+ elif (player == 'P') & (robot == 3):
+  print("Computer wins! +1 point")
+  playerpoint += 0
+  robotpoint += 1
