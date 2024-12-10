@@ -1,0 +1,241 @@
+"""
+   Author : Aiden Robinson
+   Revison date : 9 December 2024
+   Program : Rock, Paper, Scissors Assignment
+   Description : A program to play rock paper scissors with a computer opponent
+   VARIABLE DICTIONARY :
+     counter (int) = counts the rounds played so they can be compared to games variable to end loop
+     playerpoint (int) = stores the players points
+     robotpoint (int) = stores the programs points
+     roundcounter (int) = counts the rounds played so far to give a visual indicator which round you're on
+     games (int) = selected amount of games the player chose, also used to compared with counter to end the loop
+     after the amount of games has been played
+     rules (string) = stores the answer to if the player wants to read the rules or not.
+     holder (int) = is where the number of games is originally held, so we can check if its an integer or not
+     before putting it into the "games" variable
+     player (string) = player choice (R, P, S)
+     robot (int) = robot choice (1, 2, 3)
+"""
+
+import random # Import random library
+import time # Import time library
+
+print("Welcome to Rock, paper, scissors!")
+print(" ")
+counter = 0
+counter = int(counter)
+playerpoint = 0
+robotpoint = 0
+roundcounter = 0
+
+## ^^ Introduction and setting up some variables I use later
+
+
+print("Would you like to read the rules to Rock, paper, scissors?") ## Asks if you'd like to read some brief rules
+rules = input().upper() # Records your answer as a string
+
+if (rules == 'YES') or (rules == 'Y'): # If you give any of these options, it shows rules
+
+ print(" ")
+ print("------ROCK, PAPER, SCISSORS RULES------")
+ print(" ")
+ print("1. There are two players. Both players choose one option: Rock, paper or scissors.")
+ print("2. How are points determined? You get one point each time you win.")
+ print("3. Rock beats scissors, Paper beats rock, and scissors beats paper.")
+ print("4. If both players choose the same option, then there is no winner.")
+ print("5. In the case of this program, a computer will be your opponent.")
+ print("6. The computer will randomly decide rock, paper or scissors.")
+ print("7. Say stop at any time if you decide you no longer want to play!")
+ print(" ")
+ print("Have fun playing!")
+ print(" ")
+## ^^ Rules for the game
+ 
+ time.sleep(3)
+
+print(" ")
+print("How many games would you like to play?")
+holder = input("I'd like to play: ") ## Requests an amount of games to play, then records it to "holder" variable
+
+try:
+
+    games = int(holder)  ## Checks if holder is an int, if it is then it's added to 'games' variable
+
+except ValueError:
+
+    print("Error, not a number. Try again with an integer.") ## If not an int, requests you try again and exits program
+    exit()
+
+while (counter < games):
+    ## Begins the loop until the game is over, when 'counter' is larger equal to 'games', or when the player says stop.
+    print(" ")
+    print("Choices: Rock (R), Paper (P), Scissors (S)")
+    player = input("Please enter your choice: ").upper() ## Makes you enter your choice of R, P, OR S in a loop
+
+    if (player != 'R') & (player != 'P') & (player != 'S') & (player != 'STOP'): ## If your choice is not R, P, or S then it requests a valid input
+
+        print("Wrong input! Try again with a valid option (R, P, S).")
+
+    print(" ")
+    robot = random.randint(1, 3)  # ROCK == 1, PAPER == 2, SCISSORS == 3
+
+    if (player == 'R') & (robot == 1): ## Begins if statements for majority of game
+
+        print(" ")
+        playerpoint += 0
+        robotpoint += 0
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player & robot both chose rock, its a tie
+        print("Player chose: Rock")
+        print("Computer chose: Rock")
+        print("It's a tie! Nobody has won this round.")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'R') & (robot == 2):
+
+        print(" ")
+        playerpoint += 0
+        robotpoint += 1
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player chose rock, robot chose paper, robot wins
+        print("Player chose: Rock")
+        print("Computer chose: Paper")
+        print("Computer wins! +1 point")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'R') & (robot == 3):
+
+        print(" ")
+        playerpoint += 1
+        robotpoint += 0
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player chose rock, robot chose scissors, player wins
+        print("Player chose: Rock")
+        print("Computer chose: Scissors")
+        print("Player wins! +1 point")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'S') & (robot == 1):
+
+        print(" ")
+        playerpoint += 0
+        robotpoint += 1
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player chose scissors, robot chose rock, robot wins
+        print("Player chose: Scissors")
+        print("Computer chose: Rock")
+        print("Computer wins! +1 point")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'S') & (robot == 2):
+
+        print(" ")
+        playerpoint += 1
+        robotpoint += 0
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player chose scissors, robot chose paper, player wins
+        print("Player chose: Scissors")
+        print("Computer chose: Paper")
+        print("Player wins! +1 point")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'S') & (robot == 3):
+
+        print(" ")
+        playerpoint += 0
+        robotpoint += 0
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player chose scissors, robot chose scissors, its a tie
+        print("Player chose: Scissors")
+        print("Computer chose: Scissors")
+        print("It's a tie! Nobody has won this round.")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'P') & (robot == 1):
+
+        print(" ")
+        playerpoint += 1
+        robotpoint += 0
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") # When player chose paper, robot chose rock, player wins
+        print("Player chose: Paper")
+        print("Computer chose: Rock")
+        print("Player wins! +1 point")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'P') & (robot == 2):
+
+        print(" ")
+        playerpoint += 0
+        robotpoint += 0
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ")# When player chose paper, robot chose paper, its a tie
+        print("Player chose: Paper")
+        print("Computer chose: Paper")
+        print("It's a tie! Nobody has won this round.")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+
+    elif (player == 'P') & (robot == 3):
+
+        print(" ")
+        playerpoint += 0
+        robotpoint += 1
+        roundcounter += 1
+        counter +=1
+        print("Round", roundcounter)
+        print(" ") #When player chose paper, robot chose scissors, robot wins
+        print("Player chose: Paper")
+        print("Computer chose: Scissors")
+        print("Computer wins! +1 point")
+        print('Player points: ', playerpoint)
+        print('Computer points: ', robotpoint)
+    elif (player == 'STOP'):
+        counter = games
+
+##########
+print(" ")
+print("#######################################")
+print("FINAL RESULTS:") ## Easy to understand UI
+
+if (playerpoint > robotpoint):
+
+ print("Player wins with", playerpoint, "points!")
+ print('Player points: ', playerpoint)
+ print('Computer points: ', robotpoint) ## If the player has more points, then player wins
+
+elif (robotpoint > playerpoint):
+
+
+ print("Computer wins with", robotpoint, "points!")
+ print('Player points: ', playerpoint)
+ print('Computer points: ', robotpoint) ## If the robot has more points, then robot wins
+
+else:
+
+ print("It was a tie! Nobody wins.")
+ print('Player points: ', playerpoint)
+ print('Computer points: ', robotpoint) ## If points are equal then its an overall tie.
